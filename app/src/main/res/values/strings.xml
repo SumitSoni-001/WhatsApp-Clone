@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WhatsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="whatsapp_Phone_Activity">WhatsApp will send an SMS message to verify your </string>
+
+    <!--<string name="default_web_client_id">Hello blank fragment</string>-->
+
+    <string name="facebook_app_id">526560888523884</string>
+    <string name="fb_login_protocol_scheme">fb526560888523884</string>
+
+</resources>

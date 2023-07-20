@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.whatsapp">
+
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WhatsApp"
+        android:name=".OtherActivities.MyApplication"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".Auth.UserInfoActivity"></activity>
+        <!-- android:name="androidx.multidex.MultiDexApplication" -->
+        <activity android:name=".OtherActivities.ProfileActivity" />
+        <activity android:name=".OtherActivities.SettingActivity" />
+
+        <activity
+            android:name=".OtherActivities.ChatDetailActivity"
+            android:theme="@style/Theme.WhatsApp.NoActonBar" />
+
+        <activity android:name=".Auth.OtpActivity" />
+        <activity android:name=".Auth.GetPhoneNum" />
+        <activity android:name=".OtherActivities.Splash_Screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Auth.SignInActivity" />
+        <activity android:name=".Auth.SignUpActivity" />
+        <activity android:name=".OtherActivities.MainActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
